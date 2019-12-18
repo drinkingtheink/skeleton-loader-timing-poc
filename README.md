@@ -1,4 +1,10 @@
-# skeleton-loader
+# Skeleton Loader Timing POC
+
+### We needed a way to pressure test potetially using the [Ember Content-Loader plugin](https://github.com/concordnow/ember-content-loader) before deciding to use the library.
+
+This application allows you to set a unique timeout for each content-fetching component so you can see how the Content-Loader library displays under different loading conditions.
+
+
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
