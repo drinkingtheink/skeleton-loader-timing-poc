@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+	padding: 0 0 10em 0;
+}
+
+header {
+	text-align: center;
+	border-bottom: 2px solid grey;
+}
+
+.loader-stage {
+	display: flex;
+	padding: 0 2em;
+
+	main {
+		width: 70vw;
+	}
+
+	aside {
+		padding-left: 1em;
+		border-left: 2px solid grey;
+	}
+}
+
+.loader-example {
+	max-width: 100%;
+}
