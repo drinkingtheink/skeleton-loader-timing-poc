@@ -5,10 +5,13 @@ body {
 
 header {
 	text-align: center;
-	border-bottom: 2px solid grey;
 }
 
-.loader-stage {
+.button-area {
+	text-align: center;
+}
+
+.main-layout {
 	display: flex;
 	padding: 0 2em;
 

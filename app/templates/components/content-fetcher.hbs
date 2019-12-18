@@ -1,5 +1,9 @@
-{{#if this.fetching}}
-	<h2>FETCHING !</h2>
+{{#if (and this.fetching this.articleContent)}}
+	<ArticleLoader class="loader-example" />
+{{else if (and this.fetching this.tableContent)}}
+	<TableLoader class="loader-example" />
+{{else if (and this.fetching this.listContent)}}
+	<BulletListLoader class="loader-example" />	
 {{else}}
 	<p>NOT FETCHING !</p>
 {{/if}}

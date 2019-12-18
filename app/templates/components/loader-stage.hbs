@@ -1,22 +1,19 @@
+<header>
+	<h1>Skeleton Loading</h1>
+</header>
+
 <div class="button-area">
 	<button onclick={{action "kickoffDataFetch"}}>Fetch Data</button>
 </div>
 
-<main>
-	<ContentFetcher @goFetchData={{this.goFetchData}} />
-	
-	<h2>Article</h2>
-	<ArticleLoader class="loader-example" />
+<div class="main-layout">
+	<main>
+		<ContentFetcher @goFetchData={{this.goFetchData}} />
 
-	<h2>Bullet List</h2>
-	<BulletListLoader class="loader-example" />
+	</main>
 
-	<h2>Table</h2>
-	<TableLoader class="loader-example" />
+	<aside>
+		<ContentFetcher @goFetchData={{this.goFetchData}} />
 
-</main>
-
-<aside>
-	<ContentFetcher @goFetchData={{this.goFetchData}} />
-
-</aside>
+	</aside>
+</div>

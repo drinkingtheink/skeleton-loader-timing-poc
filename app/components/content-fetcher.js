@@ -4,6 +4,9 @@ export default Component.extend({
 	timeoutDur: 2000,
 	timeoutId: null,
 	fetching: false,
+	tableContent: false,
+	listContent: false,
+	articleContent: true,
 
 	willRender() {
 		if(this.goFetchData) {
@@ -16,7 +19,6 @@ export default Component.extend({
 		
 		let timer = setTimeout(() => { 
 			this.set('fetching', false); 
-			console.log(`FETCHING DATA AFTER ${this.timeoutDur}ms ++++++++++++++++++++++++`);
 		}, this.timeoutDur);
 
 		this.set('timeoutId', timer);
@@ -32,9 +34,7 @@ export default Component.extend({
 		}
 	},
 
-	didReceiveAttrs() {
-		this._super(...arguments);
-		
+	didReceiveAttrs() {	
 		if(this.goFetchData) {
 			this.fakeFetchData();
 		} 

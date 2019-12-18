@@ -6,7 +6,7 @@ export default Component.extend({
 
 	goFetchDataChanged: observer('goFetchData', function() {
 		if(this.goFetchData) {
-			setTimeout(() => { this.endDataFetch(); }, 1000);
+			setTimeout(() => { this.endDataFetch(); }, 500);
 		}
 	}),
 
