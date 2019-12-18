@@ -1,9 +1,9 @@
 <header>
-	<h1>Skeleton Loading</h1>
+	<h1>Skeleton Loading Exercise</h1>
 </header>
 
 <div class="button-area">
-	<button onclick={{action "kickoffDataFetch"}}>Fetch Data</button>
+	<button class="load-page" onclick={{action "kickoffDataFetch"}}>Simulate Page Load</button>
 </div>
 
 <div class="main-layout">
@@ -15,9 +15,17 @@
 		<ContentFetcher @goFetchData={{this.goFetchData}} />
 
 		<ContentFetcher @goFetchData={{this.goFetchData}} />
+
+		<ContentFetcher @goFetchData={{this.goFetchData}} />
 	</main>
 
 	<aside>
+		<ContentFetcher @goFetchData={{this.goFetchData}} />
+
+		<ContentFetcher @goFetchData={{this.goFetchData}} />
+
+		<ContentFetcher @goFetchData={{this.goFetchData}} />
+
 		<ContentFetcher @goFetchData={{this.goFetchData}} />
 
 		<ContentFetcher @goFetchData={{this.goFetchData}} />

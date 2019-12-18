@@ -1,6 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Karla|Rubik&display=swap');
+
 body {
 	margin: 0;
 	padding: 0 0 10em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+button {
+	font-family: 'Rubik', sans-serif;
+}
+
+html,
+p,
+span {
+	font-family: 'Karla', sans-serif;
 }
 
 header {
@@ -9,6 +25,20 @@ header {
 
 .button-area {
 	text-align: center;
+	margin-top: -1em;
+
+	button {
+		font-size: 120%;
+		border-radius: 10px;
+		padding: .5em 1.5em;
+		transition: all .2s linear;
+
+		&:hover {
+			color: white;
+			background-color: rgba(black, .8);
+			cursor: pointer;
+		}
+	}
 }
 
 .main-layout {
@@ -27,4 +57,32 @@ header {
 
 .loader-example {
 	max-width: 100%;
+}
+
+.content-fetcher {
+	padding-top: 2em;
+}
+
+$actionsBorder: 2px solid rgba(black, .05);
+
+.actions {
+	padding: .5em;
+	border-bottom: $actionsBorder;
+	border-top: $actionsBorder;
+
+	section {
+		margin-bottom: .25em;
+	}
+
+	.content-type-control {
+		&.active {
+			font-weight: bold;
+			color: white;
+			background-color: rgba(black, .8);
+		}
+	}
+
+	.timeout-action input {
+		width: 6em;
+	}
 }

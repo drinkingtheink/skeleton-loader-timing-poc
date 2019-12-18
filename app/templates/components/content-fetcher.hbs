@@ -5,7 +5,36 @@
 {{else if (and this.fetching this.listContent)}}
 	<BulletListLoader class="loader-example" />	
 {{else}}
-	<p>NOT FETCHING !</p>
+	<p>DONE FETCHING</p>
 {{/if}}
 
-<input type="number" size="10" value={{this.timeoutDur}} oninput={{action "updateTimeoutDur"}} /><span> ms</span>
+<div class="actions">
+	<section class="timeout-action">
+		<span>Fetch Delay: </span>
+		<input class="timeout-control" type="number" size="10" value={{this.timeoutDur}} oninput={{action "updateTimeoutDur"}} /><span> ms</span>
+	</section>
+	
+	<section class="content-type-action">
+		<span>Content Type: </span>
+		
+		<button 
+			onclick={{action "activateArticleContent"}}
+			class="article-type-control content-type-control {{if this.articleContent "active" "inactive"}}"> 
+			Article
+		</button>
+		
+		<button 
+			onclick={{action "activateListContent"}}
+			class="bullet-list-type-control content-type-control {{if this.listContent "active" "inactive"}}">
+			Bullet List
+		</button>
+		
+		<button 
+			onclick={{action "activateTableContent"}}
+			class="table-type-control content-type-control {{if this.tableContent "active" "inactive"}}">
+			Table
+		</button>
+	</section>
+
+</div>
+
