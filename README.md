@@ -4,7 +4,7 @@
 
 This application allows you to set a unique timeout for each content-fetching component so you can see how the Content-Loader library displays under different loading conditions.
 
-
+You can also select a content type for the skeleton loader to represent a particular content type while loading in your UI.
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
