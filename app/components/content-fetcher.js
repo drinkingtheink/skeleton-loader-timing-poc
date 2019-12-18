@@ -1,10 +1,9 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-	timeoutDur: 2,
+	timeoutDur: 2000,
 	timeoutId: null,
 	fetching: false,
-	goFetchData: false,
 
 	willRender() {
 		if(this.goFetchData) {
@@ -15,9 +14,12 @@ export default Component.extend({
 	fakeFetchData() {
 		this.set('fetching', true);
 		
-		setTimeout(() => { 
-			this.set('fetching', true); 
+		let timer = setTimeout(() => { 
+			this.set('fetching', false); 
+			console.log(`FETCHING DATA AFTER ${this.timeoutDur}ms ++++++++++++++++++++++++`);
 		}, this.timeoutDur);
+
+		this.set('timeoutId', timer);
 	},
 
 	clearFetchData() {
@@ -28,5 +30,13 @@ export default Component.extend({
 		updateTimeoutDur(e) {
 			this.set('timeoutDur', e.target.value);
 		}
+	},
+
+	didReceiveAttrs() {
+		this._super(...arguments);
+		
+		if(this.goFetchData) {
+			this.fakeFetchData();
+		} 
 	}
 });

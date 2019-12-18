@@ -1,7 +1,7 @@
 {{#if this.fetching}}
 	<h2>FETCHING !</h2>
 {{else}}
-	<h2>NOT FETCHING !</h2>
+	<p>NOT FETCHING !</p>
 {{/if}}
 
-<input value={{this.timeoutDur}} oninput={{action "updateTimeoutDur"}} /><span> ms</span>
+<input type="number" value={{this.timeoutDur}} oninput={{action "updateTimeoutDur"}} /><span> ms</span>

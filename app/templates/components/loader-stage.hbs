@@ -1,9 +1,10 @@
+<div class="button-area">
+	<button onclick={{action "kickoffDataFetch"}}>Fetch Data</button>
+</div>
+
 <main>
-
-	<div class="button-area">
-		<button onclick={{action "kickoffDataFetch"}}>Fetch Data</button>
-	</div>
-
+	<ContentFetcher @goFetchData={{this.goFetchData}} />
+	
 	<h2>Article</h2>
 	<ArticleLoader class="loader-example" />
 
@@ -16,6 +17,6 @@
 </main>
 
 <aside>
-	<ContentFetcher goFetchData={{goFetchData}} />
+	<ContentFetcher @goFetchData={{this.goFetchData}} />
 
 </aside>
