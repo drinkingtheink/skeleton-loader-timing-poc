@@ -75,16 +75,19 @@ $actionsBorder: 2px solid rgba(black, .05);
 	}
 
 	.content-type-control {
+		margin-left: .25em;
+		
 		&.active {
 			font-weight: bold;
 			color: white;
 			background-color: rgba(black, .8);
 		}
 	}
+}
 
-	.timeout-action input {
-		width: 6em;
-	}
+.timeout-duration-display {
+	display: inline-block;
+	width: 5em;
 }
 
 footer {

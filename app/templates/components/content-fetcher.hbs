@@ -10,8 +10,16 @@
 
 <div class="actions">
 	<section class="timeout-action">
-		<span>Fetch Delay: </span>
-		<input class="timeout-control" type="number" size="10" value={{this.timeoutDur}} oninput={{action "updateTimeoutDur"}} /><span> ms</span>
+		<span class="timeout-action-label">Fetch Delay: <strong class="timeout-duration-display">{{this.timeoutDur}}ms</strong></span>
+		<input 
+			type="range" 
+			class="timeout-control" 
+			value={{this.timeoutDur}} 
+			oninput={{action "updateTimeoutDur"}} 
+			name="timeout-control" 
+			min="0" 
+			max="10000"
+			step="100" />
 	</section>
 	
 	<section class="content-type-action">
